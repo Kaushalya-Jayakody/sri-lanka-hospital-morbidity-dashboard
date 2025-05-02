@@ -2,12 +2,14 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
+
 # Page setup
 st.set_page_config(page_title="Sri Lanka Hospital Morbidity Dashboard", layout="wide")
 
 st.title("🏥 Sri Lanka Hospital Morbidity Dashboard (2006–2013)")
 st.markdown("""
 Explore hospital discharge data in Sri Lanka by **disease**, **sex**, and **age group**.
+            
 Use the sidebar filters to interact with the data.
 """)
 
