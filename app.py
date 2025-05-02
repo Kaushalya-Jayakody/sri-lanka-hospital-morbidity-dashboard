@@ -56,4 +56,4 @@ with st.expander("📄 Show Filtered Data"):
 
 # footer
 st.markdown("---")
-st.caption("📘 Developed for 5DATA004W – Data Science Project Lifecycle · University of Westminster")
+st.caption("📘 Developed for 5DATA004W – Data Science Project Lifecycle · University of Westminster | Streamlit Dashboard")
