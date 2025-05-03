@@ -41,7 +41,7 @@ st.plotly_chart(fig2, use_container_width=True)
 
 # Chart 3 – Pie chart by sex
 st.subheader(f"🚻 Pie Chart – {selected_disease} Discharges by Sex")
-sex_data = df[df["Disease"] == selected_disease].groupby("Sex")["Count"].sum().reset_index()
+sex_data = df[(df["Disease"] == selected_disease) & (df["Age_Group"] == selected_age)].groupby("Sex")["Count"].sum().reset_index()
 fig3 = px.pie(sex_data, names="Sex", values="Count")
 st.plotly_chart(fig3, use_container_width=True)
 
