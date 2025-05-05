@@ -49,7 +49,21 @@ st.plotly_chart(fig3, use_container_width=True)
 st.subheader(f"📌 Top 10 Diseases in Age Group: {selected_age}")
 top10 = df[df["Age_Group"] == selected_age].groupby("Disease")["Count"].sum().reset_index()
 top10 = top10.sort_values(by="Count", ascending=False).head(10)
-fig4 = px.bar(top10, x="Disease", y="Count", title="Top 10 Diseases", color="Disease")
+fig4 = px.bar(
+    top10,
+    x="Disease",
+    y="Count",
+    title="Top 10 Diseases",
+    color="Disease",
+    height=600  
+)
+
+# Rotate x-axis labels if they overlap
+fig4.update_layout(xaxis_tickangle=-45)
+
+# Adjust layout margins and remove legend to make it cleaner
+fig4.update_layout(margin=dict(t=50, b=150), showlegend=False)
+
 st.plotly_chart(fig4, use_container_width=True)
 
 # raw data table
